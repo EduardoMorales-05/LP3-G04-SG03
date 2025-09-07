@@ -52,7 +52,7 @@ public class Main {
                 }
             } while (salario < 0);
             
-            scanner.nextLine(); // Limpiar el buffer
+            scanner.nextLine(); 
             
             System.out.print("Ingrese el departamento del empleado: ");
             String departamento = scanner.nextLine();
