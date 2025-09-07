@@ -1,0 +1,104 @@
+import java.util.Scanner;
+import java.util.InputMismatchException;
+
+class Empleado {
+    private String nombre;
+    private double salario;
+    private String departamento;
+
+    public Empleado(String nombre, double salario, String departamento) {
+        this.nombre = nombre;
+        this.salario = salario;
+        this.departamento = departamento;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public double getSalario() {
+        return salario;
+    }
+
+    public String getDepartamento() {
+        return departamento;
+    }
+}
+
+class CalculadoraPago {
+    public double calcularPagoMensual(Empleado empleado) {
+        return empleado.getSalario() - (empleado.getSalario() * 0.1);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        boolean continuar = true;
+        
+        System.out.println("SISTEMA DE GESTIÓN DE EMPLEADOS");
+        
+        while (continuar) {
+            // Ingresar datos del empleado
+            System.out.println("\n--- NUEVO EMPLEADO ---");
+            System.out.print("Ingrese el nombre del empleado: ");
+            String nombre = scanner.nextLine();
+            
+            double salario = -1;
+            boolean salarioValido = false;
+            
+            while (!salarioValido) {
+                try {
+                    System.out.print("Ingrese el salario del empleado (no negativo): ");
+                    salario = scanner.nextDouble();
+                    scanner.nextLine(); // Limpiar el buffer
+                    
+                    if (salario < 0) {
+                        System.out.println("Error: El salario no puede ser negativo. Intente nuevamente.");
+                    } else {
+                        salarioValido = true;
+                    }
+                } catch (InputMismatchException e) {
+                    System.out.println("Error: Debe ingresar un número válido para el salario. Intente nuevamente.");
+                    scanner.nextLine(); // Limpiar el buffer incorrecto
+                }
+            }
+            
+            System.out.print("Ingrese el departamento del empleado: ");
+            String departamento = scanner.nextLine();
+            
+            // Crear el empleado
+            Empleado emp = new Empleado(nombre, salario, departamento);
+            
+            // Calcular pago mensual
+            CalculadoraPago calc = new CalculadoraPago();
+            double pago = calc.calcularPagoMensual(emp);
+            
+            // Mostrar información
+            System.out.println("\n=INFORMACIÓN DEL EMPLEADO");
+            System.out.println("Nombre: " + emp.getNombre());
+            System.out.println("Salario base: $" + emp.getSalario());
+            System.out.println("Departamento: " + emp.getDepartamento());
+            System.out.println("Pago mensual (después de descuentos): $" + pago);
+            
+            // Preguntar si desea agregar otro empleado
+            boolean respuestaValida = false;
+            while (!respuestaValida) {
+                System.out.print("\n¿Desea agregar otro empleado? (s/n): ");
+                String respuesta = scanner.nextLine().toLowerCase();
+                
+                if (respuesta.equals("s") || respuesta.equals("si")) {
+                    respuestaValida = true;
+                } else if (respuesta.equals("n") || respuesta.equals("no")) {
+                    continuar = false;
+                    respuestaValida = true;
+                    System.out.println("¡Gracias por usar el sistema!");
+                } else {
+                    System.out.println("Por favor, ingrese 's' para sí o 'n' para no.");
+                }
+            }
+        }
+        
+        scanner.close();
+    }
+}
