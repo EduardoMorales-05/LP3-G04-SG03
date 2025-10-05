@@ -1,5 +1,3 @@
-package Principal;
-
 import modelo.PedidoModelo;
 import vista.PedidoVista;
 import controlador.PedidoControlador;
