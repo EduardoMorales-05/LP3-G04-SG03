@@ -22,12 +22,12 @@ flowchart TD
     MostrarVista --> EsperarUsuario[Esperar Interacción del Usuario]
     EsperarUsuario --> End([Aplicación en Ejecución])
     
-    style Start fill:#90EE90
-    style End fill:#90EE90
-    style CrearServicio fill:#E8F4F8
-    style CrearControlador fill:#E8F4F8
-    style CrearVista fill:#E8F4F8
-    style ConfigurarObservadores fill:#FFB6C1
+    style Start fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#fff
+    style End fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#fff
+    style CrearServicio fill:#2196F3,stroke:#1976D2,stroke-width:2px,color:#fff
+    style CrearControlador fill:#2196F3,stroke:#1976D2,stroke-width:2px,color:#fff
+    style CrearVista fill:#2196F3,stroke:#1976D2,stroke-width:2px,color:#fff
+    style ConfigurarObservadores fill:#E91E63,stroke:#C2185B,stroke-width:2px,color:#fff
 ```
 
 ## 2. Diagrama de Flujo - Operación CRUD (Registrar Equipo)
@@ -65,11 +65,11 @@ flowchart TD
     ActualizarTabla --> MostrarExito[Mostrar Mensaje de Éxito]
     MostrarExito --> End([Operación Completada])
     
-    style Start fill:#90EE90
-    style End fill:#90EE90
-    style Validar fill:#FFD700
-    style NotificarObservadores fill:#FFB6C1
-    style InsertarSQL fill:#E8F4F8
+    style Start fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#fff
+    style End fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#fff
+    style Validar fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#fff
+    style NotificarObservadores fill:#E91E63,stroke:#C2185B,stroke-width:2px,color:#fff
+    style InsertarSQL fill:#2196F3,stroke:#1976D2,stroke-width:2px,color:#fff
 ```
 
 ## 3. Diagrama de Flujo - Cargar Equipos desde Archivo CSV
@@ -106,18 +106,18 @@ flowchart TD
     ActualizarTabla --> MostrarMensaje[Mostrar mensaje con cantidad]
     MostrarMensaje --> End2([Operación Completada])
     
-    style Start fill:#90EE90
-    style End1 fill:#90EE90
-    style End2 fill:#90EE90
-    style UsuarioSelecciona fill:#FFD700
-    style EsEncabezado fill:#FFD700
-    style HayMasLineas fill:#FFD700
-    style HayMasEquipos fill:#FFD700
-    style NotificarObservadores fill:#FFB6C1
-    style AbrirArchivo fill:#E8F4F8
-    style ParsearCampos fill:#E8F4F8
-    style InsertarBD fill:#E8F4F8
-    style CrearEventoCarga fill:#E8F4F8
+    style Start fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#fff
+    style End1 fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#fff
+    style End2 fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#fff
+    style UsuarioSelecciona fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#fff
+    style EsEncabezado fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#fff
+    style HayMasLineas fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#fff
+    style HayMasEquipos fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#fff
+    style NotificarObservadores fill:#E91E63,stroke:#C2185B,stroke-width:2px,color:#fff
+    style AbrirArchivo fill:#2196F3,stroke:#1976D2,stroke-width:2px,color:#fff
+    style ParsearCampos fill:#2196F3,stroke:#1976D2,stroke-width:2px,color:#fff
+    style InsertarBD fill:#2196F3,stroke:#1976D2,stroke-width:2px,color:#fff
+    style CrearEventoCarga fill:#2196F3,stroke:#1976D2,stroke-width:2px,color:#fff
 ```
 
 ## 4. Diagrama de Flujo - Ordenamiento y Presentación
@@ -159,15 +159,15 @@ flowchart TD
     LlenarFilas --> MostrarTabla[Mostrar tabla actualizada]
     MostrarTabla --> End([Vista Actualizada])
     
-    style Start fill:#90EE90
-    style End fill:#90EE90
-    style EsOrdenamiento fill:#FFD700
-    style EsPresentacion fill:#FFD700
-    style AplicarOrdenamiento fill:#FFD700
-    style VistaCompacta fill:#FFD700
-    style VistaDetallada fill:#FFD700
-    style DeterminarVista fill:#E8F4F8
-    style ActualizarModelo fill:#E8F4F8
+    style Start fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#fff
+    style End fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#fff
+    style EsOrdenamiento fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#fff
+    style EsPresentacion fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#fff
+    style AplicarOrdenamiento fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#fff
+    style VistaCompacta fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#fff
+    style VistaDetallada fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#fff
+    style DeterminarVista fill:#2196F3,stroke:#1976D2,stroke-width:2px,color:#fff
+    style ActualizarModelo fill:#2196F3,stroke:#1976D2,stroke-width:2px,color:#fff
 ```
 
 ## 5. Diagrama de Flujo - Sistema de Notificaciones (Patrón Observer)
@@ -200,15 +200,15 @@ flowchart TD
     InvokeLater --> ActualizarTextArea[Actualizar JTextArea]
     ActualizarTextArea --> HayMas
     
-    style Start fill:#90EE90
-    style End1 fill:#90EE90
-    style End2 fill:#90EE90
-    style OperacionExitosa fill:#FFD700
-    style HayMas fill:#FFD700
-    style TipoObservador fill:#FFD700
-    style LlamarNotificar fill:#FFB6C1
-    style DeterminarTipo fill:#E8F4F8
-    style CrearEvento fill:#E8F4F8
+    style Start fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#fff
+    style End1 fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#fff
+    style End2 fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#fff
+    style OperacionExitosa fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#fff
+    style HayMas fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#fff
+    style TipoObservador fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#fff
+    style LlamarNotificar fill:#E91E63,stroke:#C2185B,stroke-width:2px,color:#fff
+    style DeterminarTipo fill:#2196F3,stroke:#1976D2,stroke-width:2px,color:#fff
+    style CrearEvento fill:#2196F3,stroke:#1976D2,stroke-width:2px,color:#fff
 ```
 
 ## 6. Diagrama de Flujo - Eliminar Equipo
@@ -238,18 +238,18 @@ flowchart TD
     ActualizarTabla --> MostrarExito[Mostrar mensaje de éxito]
     MostrarExito --> End4([Operación Completada])
     
-    style Start fill:#90EE90
-    style End1 fill:#90EE90
-    style End2 fill:#90EE90
-    style End3 fill:#90EE90
-    style End4 fill:#90EE90
-    style HaySeleccion fill:#FFD700
-    style UsuarioConfirma fill:#FFD700
-    style EliminacionExitosa fill:#FFD700
-    style NotificarObservadores fill:#FFB6C1
-    style BuscarEquipo fill:#E8F4F8
-    style EliminarBD fill:#E8F4F8
-    style CrearEvento fill:#E8F4F8
+    style Start fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#fff
+    style End1 fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#fff
+    style End2 fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#fff
+    style End3 fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#fff
+    style End4 fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#fff
+    style HaySeleccion fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#fff
+    style UsuarioConfirma fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#fff
+    style EliminacionExitosa fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#fff
+    style NotificarObservadores fill:#E91E63,stroke:#C2185B,stroke-width:2px,color:#fff
+    style BuscarEquipo fill:#2196F3,stroke:#1976D2,stroke-width:2px,color:#fff
+    style EliminarBD fill:#2196F3,stroke:#1976D2,stroke-width:2px,color:#fff
+    style CrearEvento fill:#2196F3,stroke:#1976D2,stroke-width:2px,color:#fff
 ```
 
 ## Descripción de los Flujos
