@@ -24,9 +24,9 @@ flowchart TD
     
     style Start fill:#90EE90
     style End fill:#90EE90
-    style CrearServicio fill:#87CEEB
-    style CrearControlador fill:#87CEEB
-    style CrearVista fill:#87CEEB
+    style CrearServicio fill:#E8F4F8
+    style CrearControlador fill:#E8F4F8
+    style CrearVista fill:#E8F4F8
     style ConfigurarObservadores fill:#FFB6C1
 ```
 
@@ -69,7 +69,7 @@ flowchart TD
     style End fill:#90EE90
     style Validar fill:#FFD700
     style NotificarObservadores fill:#FFB6C1
-    style InsertarSQL fill:#87CEEB
+    style InsertarSQL fill:#E8F4F8
 ```
 
 ## 3. Diagrama de Flujo - Cargar Equipos desde Archivo CSV
@@ -114,6 +114,10 @@ flowchart TD
     style HayMasLineas fill:#FFD700
     style HayMasEquipos fill:#FFD700
     style NotificarObservadores fill:#FFB6C1
+    style AbrirArchivo fill:#E8F4F8
+    style ParsearCampos fill:#E8F4F8
+    style InsertarBD fill:#E8F4F8
+    style CrearEventoCarga fill:#E8F4F8
 ```
 
 ## 4. Diagrama de Flujo - Ordenamiento y Presentación
@@ -162,6 +166,8 @@ flowchart TD
     style AplicarOrdenamiento fill:#FFD700
     style VistaCompacta fill:#FFD700
     style VistaDetallada fill:#FFD700
+    style DeterminarVista fill:#E8F4F8
+    style ActualizarModelo fill:#E8F4F8
 ```
 
 ## 5. Diagrama de Flujo - Sistema de Notificaciones (Patrón Observer)
@@ -201,6 +207,8 @@ flowchart TD
     style HayMas fill:#FFD700
     style TipoObservador fill:#FFD700
     style LlamarNotificar fill:#FFB6C1
+    style DeterminarTipo fill:#E8F4F8
+    style CrearEvento fill:#E8F4F8
 ```
 
 ## 6. Diagrama de Flujo - Eliminar Equipo
@@ -239,6 +247,9 @@ flowchart TD
     style UsuarioConfirma fill:#FFD700
     style EliminacionExitosa fill:#FFD700
     style NotificarObservadores fill:#FFB6C1
+    style BuscarEquipo fill:#E8F4F8
+    style EliminarBD fill:#E8F4F8
+    style CrearEvento fill:#E8F4F8
 ```
 
 ## Descripción de los Flujos
