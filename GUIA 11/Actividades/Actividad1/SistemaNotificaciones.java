@@ -18,7 +18,7 @@ class Usuario implements Observador {
 
     @Override
     public void recibirNotificacion(String mensaje) {
-        System.out.println("🔔 " + nombre + " ha recibido: " + mensaje);
+        System.out.println( nombre + " ha recibido: " + mensaje);
     }
 }
 
@@ -29,13 +29,13 @@ public class SistemaNotificaciones {
     // Suscribir (attach)
     public void suscribir(Observador observador) {
         observadores.add(observador);
-        System.out.println("✅ Observador suscrito.");
+        System.out.println(" Observador suscrito.");
     }
 
     // Desuscribir (detach)
     public void desuscribir(Observador observador) {
         observadores.remove(observador);
-        System.out.println("❌ Observador desuscrito.");
+        System.out.println(" Observador desuscrito.");
     }
 
     // Notificar (notifyObservers)
